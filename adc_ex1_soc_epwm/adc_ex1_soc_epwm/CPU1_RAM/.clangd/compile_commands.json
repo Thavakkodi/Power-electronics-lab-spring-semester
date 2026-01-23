@@ -1,0 +1,72 @@
+[
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/adc_ex1_soc_epwm.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_adc.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_codestartbranch.asm"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_cputimers.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_defaultisr.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_dma.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_epwm.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_globalvariabledefs.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_gpio.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_piectrl.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_pievect.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_sysctrl.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG -xc",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_tempsensorconv.c"
+   },
+   {
+      "directory" : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/CPU1_RAM",
+      "command"   : "clang++ -I\"/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/common/include/\" -I\"/Users/bryan/ti/C2000Ware_6_00_01_00/device_support/f28p55x/headers/include/\" -I\"/Applications/ti/ccs2040/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include\" -DDEBUG",
+      "file"      : "/Users/bryan/Power-electronics-lab-spring-semester/adc_ex1_soc_epwm/adc_ex1_soc_epwm/f28p55x_usdelay.asm"
+   }
+]
