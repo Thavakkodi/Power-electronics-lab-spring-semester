@@ -74,9 +74,18 @@ uint16_t index;                              // Index into result buffer
 volatile uint16_t bufferFull;                // Flag to indicate buffer is full
 
 // my globals
-float32_t duty_cycle = 0.25;
-const float32_t pwm_freq = 10e3;
-const uint16_t waveform_type = TB_COUNT_UP;
+float32_t duty_cycle = 0.5;
+const float32_t pwm_freq = 200e3;
+const uint16_t waveform_type = TB_COUNT_UPDOWN;
+volatile float32_t Vout;
+volatile float32_t Vin;
+volatile float32_t IL;
+// ADC voltage divider values
+const float32_t R1 = 150000;
+const float32_t R2 = 100000;
+const float32_t Vfs = 3.3;
+const uint32_t n_ADC = 12;
+
 
 //
 // Function Prototypes
@@ -307,6 +316,13 @@ void initEPWM(void)
     GpioCtrlRegs.GPAGMUX1.bit.GPIO13 = 0b00;
     GpioCtrlRegs.GPAMUX1.bit.GPIO13 = 0b01;
 
+    // trigger ADC SOCs
+    EPwm7Regs.ETSEL.bit.SOCAEN = 0b1;
+    EPwm7Regs.ETSEL.bit.SOCASEL = 0b011;
+
+    EPwm7Regs.ETPS.bit.SOCAPRD = ET_1ST;
+    EPwm7Regs.ETPS.bit.INTPRD = ET_1ST;
+
     EDIS;
 }
 
@@ -325,10 +341,18 @@ void initADCSOC(void)
                                            // 4:A4   5:A5   6:A6   7:A7
                                            // 8:A8   9:A9   A:A10  B:A11
                                            // C:A12  D:A13  E:A14  F:A15
-    AdcaRegs.ADCSOC0CTL.bit.ACQPS = 9;     // Sample window is 10 SYSCLK cycles
-    AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 5;   // Trigger on ePWM1 SOCA
+    AdcaRegs.ADCSOC0CTL.bit.ACQPS = 15;     // Sample window is 100ns (assuming 150MHz)
+    AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 0x11;   // Trigger on ePWM7 SOCA
 
-    AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 0; // End of SOC0 will set INT1 flag
+    AdcaRegs.ADCSOC1CTL.bit.CHSEL = 4;     // SOC01 will convert pin A4
+    AdcaRegs.ADCSOC1CTL.bit.ACQPS = 15;     // Sample window is 100ns (assuming 150MHz)
+    AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 0x11;   // Trigger on ePWM7 SOCA
+
+    AdcaRegs.ADCSOC2CTL.bit.CHSEL = 0xC;     // SOC01 will convert pin A12
+    AdcaRegs.ADCSOC2CTL.bit.ACQPS = 15;     // Sample window is 100ns (assuming 150MHz)
+    AdcaRegs.ADCSOC2CTL.bit.TRIGSEL = 0x11;   // Trigger on ePWM7 SOCA
+
+    AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 2; // End of SOC2 will set INT1 flag
     AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;   // Enable INT1 flag
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1; // Make sure INT1 flag is cleared
 
@@ -340,37 +364,15 @@ void initADCSOC(void)
 //
 __interrupt void adcA1ISR(void)
 {
-    //
-    // Add the latest result to the buffer
-    // ADCRESULT0 is the result register of SOC0
-    adcAResults[index++] = AdcaResultRegs.ADCRESULT0;
-
-    //
-    // Set the bufferFull flag if the buffer is full
-    //
-    if(RESULTS_BUFFER_SIZE <= index)
-    {
-        index = 0;
-        bufferFull = 1;
-    }
-
-    //
     // Clear the interrupt flag
-    //
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;
 
-    //
-    // Check if overflow has occurred
-    //
-    if(1 == AdcaRegs.ADCINTOVF.bit.ADCINT1)
-    {
-        AdcaRegs.ADCINTOVFCLR.bit.ADCINT1 = 1; //clear INT1 overflow flag
-        AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1; //clear INT1 flag
-    }
+    // back-calculate Vcc using ADC unisgned int
+    Vout = AdcaResultRegs.ADCRESULT0 * (Vfs/(4096-1)) * ((R1+R2)/R1);
+    Vin = AdcaResultRegs.ADCRESULT1 * (Vfs/(4096-1)) * ((R1+R2)/R1);
+    IL = AdcaResultRegs.ADCRESULT2 * (Vfs/(4096-1));
 
-    //
     // Acknowledge the interrupt
-    //
     PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
 }
 
